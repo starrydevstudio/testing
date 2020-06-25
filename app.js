@@ -1,5 +1,5 @@
 const app = require('express')();
-var path = require('path');
+const path = require('path');
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -10,6 +10,10 @@ app.get("/",function(req, res) {
 
 app.get("/setup" ,function(req,res) {
     res.send("Setup is successful")
+})
+
+app.get("/testing", function(req,res) {
+    res.send("Hello World")
 })
 
 app.listen(3000, function() {
